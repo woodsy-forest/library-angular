@@ -1,0 +1,40 @@
+<div fxFlex="100" style="margin: 10px;"> 
+  <div class="loader-block" *ngIf="ShowLoading">
+    <app-spinner></app-spinner>
+  </div>
+  <div *ngIf="!ShowLoading">
+    <div class="pageBody">
+        <div fxFlex="100" fxLayout.xs="column" fxLayout.gt-xs="row" fxFlexFill>
+          <div fxFlex.gt-xs="50" fxFlex.xs="100">
+            <div style="margin-right: 10px;" class="pageSubTitle">Please select a book</div>
+              <div *ngFor="let bookDTO of bookDTOs">
+                 <div class="TableSearch" (click)="SelBook(bookDTO)">{{bookDTO.title}}</div>
+              </div>
+          </div>
+          <div class="loader-block" *ngIf="ShowLoadingWord">
+            <app-spinner></app-spinner>
+          </div>
+          <div fxFlex.gt-xs="50" fxFlex.xs="100" *ngIf="!ShowLoadingWord">
+            <div fxLayout="row">
+              <span style="font-size: 17px;">Search:</span><input
+              [formControl]="searchTis"
+              (keyup)="InputTis_valuechange($event)"
+              type="text">
+                     
+            </div>
+            <div class="pageSubTitle" *ngIf="SelectedBookTitle.length>0">Selected book: {{SelectedBookTitle}}</div>
+            <div style="border: lightgray 1px solid; margin: 5px; padding: 5px;" *ngIf="wordDTOs.length>0">
+                <div *ngFor="let wordDTO of wordDTOs" fxLayout="row">
+                  <div fxFlex="50">{{wordDTO.word}}</div>
+                  <div fxFlex="50">{{wordDTO.count}}</div>
+                </div>
+            </div>
+            <div *ngIf="ShowNoWordMessage">No word(s) found.</div>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+

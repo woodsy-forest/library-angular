@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+//Page
+.pageTitle {
+    font-size: 20px;
+    font-weight:bold;
+    margin-top: 20px;
+    border-bottom: solid 1px;
+    padding-bottom: 10px;
+  }
+  .pageSubTitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    border-bottom: solid 1px;
+    padding-bottom: 10px;
+  }
+  .pageBody {
+    font-size: 14px;
+    color: rgba(0,0,0,.87);
+    margin-top: 10px;
+    line-height: 20px;
+  }
+
+  .pageButton {
+    background-color: #3f51b5;
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .TableSearch {
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .TableSearch:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    font-weight: bold;
+  }
+
+  input[type=text]:focus {
+    background-color: gainsboro;
+  
+  }
+  input[type=text] {
+    padding: 5px;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    width: 95%;
+  }
+  input[type=text]:hover {
+    border: 2px solid lightblue;
+  }
